@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContestListComponent } from './contest-list/contest-list.component';
+// import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // HomeComponent,
+    // PageNotFoundComponent,
+    routingComponents,
+    ContestListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
