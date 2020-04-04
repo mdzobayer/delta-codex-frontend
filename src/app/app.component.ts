@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ApiService } from './api.service';
-import { debug } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +8,9 @@ import { debug } from 'util';
 export class AppComponent {
   title = 'delta-codex-frontend';
 
-  contestInfo: any;
 
-  constructor(private api: ApiService) {
-    this.getSmartphone();
+  constructor() {
+
   }
 
-  getSmartphone() {
-    this.api.getSmartphone()
-      .subscribe(data => {
-        debugger
-      });
-  }
 }
