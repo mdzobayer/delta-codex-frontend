@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
+import { ContestListResp } from '../Models/contestlistresp';
 
 @Component({
   selector: 'app-contest-list',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContestListComponent implements OnInit {
 
-  constructor() { }
+  contestListResp: ContestListResp;
+
+  constructor(private api: ApiService) {
+
+  }
 
   ngOnInit() {
+    this.getContests();
   }
+
+  getContests() {
+    this.api.getContestList()
+      .subscribe(data => {
+
+        this.contestListResp = data;
+
+      });
+  }
+
+  
 
 }
