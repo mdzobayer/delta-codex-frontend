@@ -2,8 +2,8 @@
     <p>Currenty we are displaying Codeforces contest only</p>
 </div>
 
-<div>
-  <table mat-table [dataSource]="contestList" class="mat-elevation-z8">
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="contestList">
 
       <!-- ID Column -->
       <ng-container matColumnDef="id">
@@ -35,7 +35,8 @@
         <td mat-cell *matCellDef="let element"> {{element.startTimeSeconds}} </td>
       </ng-container>
     
-      <tr mat-header-row *matHeaderRowDef="contestlistColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="contestlistColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: contestlistColumns;"></tr>
     </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons></mat-paginator>
 </div>

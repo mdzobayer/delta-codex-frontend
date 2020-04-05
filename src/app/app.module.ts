@@ -9,7 +9,7 @@ import { ContestListComponent } from './components/contest-list/contest-list.com
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import { MatTableModule } from '@angular/material';
     FlexLayoutModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
