@@ -49,7 +49,7 @@ export class ContestListComponent implements OnInit {
   getContests() {
     this.api.getContestList()
       .subscribe(data => {
-debugger
+
         this.contestList = data['result'];
 
       });
