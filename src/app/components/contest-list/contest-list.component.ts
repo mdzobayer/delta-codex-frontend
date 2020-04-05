@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-import { ContestListResp } from '../Models/contestlistresp';
+import { ApiService } from '../../services/api.service';
+import { ContestListResp } from '../../models/contestlistresp';
 
 @Component({
   selector: 'app-contest-list',
