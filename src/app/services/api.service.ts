@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CodeforcesUrls } from '../assets/codeforces/const-urls';
-import { ContestListResp } from './Models/contestlistresp'
+import { CodeforcesUrls } from '../../assets/codeforces/const-urls';
+import { ContestListResp } from '../models/contestlistresp'
 
 
 @Injectable({
