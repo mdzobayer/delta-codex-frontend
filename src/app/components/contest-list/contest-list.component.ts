@@ -3,6 +3,7 @@ import { ApiService } from '../../services/api.service';
 import { Contest } from '../../models/contest';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ContestListResp } from 'src/app/models/contestlistresp';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class ContestListComponent implements OnInit {
 
   getContests() {
     this.api.getContestList()
-      .subscribe(data => {
+      .subscribe((data: ContestListResp) => {
 
         this.contestList = new MatTableDataSource<Contest>(data['result']);
         this.contestList.paginator = this.paginator;
